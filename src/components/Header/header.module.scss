@@ -1,0 +1,190 @@
+header{
+  .navbar{
+    padding: 33px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .logo{
+      cursor: pointer;
+    }
+    .panel{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .searchInput{
+        width: 240px;
+        height: 43px;
+        border: 2px solid #000000;
+        border-radius: 11px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 12px;
+        margin-right: 12px;
+        visibility: hidden;
+        transition: visibility 0s 0.6s, opacity 0.6s ease; /* при закрытии окна навигации, сначала плавно понижается непрозрачность - opacity: 0; затем мгновенно исчезает через 0.6s ожидания - visibility: hidden; */
+        opacity: 0;
+        input{
+          width: 100%;
+          border: 0;
+          outline:none;
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 100%;
+          color: #000000;
+        }
+      }
+      .searchInputActive{
+        width: 300px;
+        height: 43px;
+        border: 2px solid #000000;
+        border-radius: 11px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 12px;
+        margin-right: 12px;
+        transition: visibility 0s 0s, opacity 0.6s ease; /* при открытии окна навигации, оно сначала мгновенно появляется - visibility: visible;, затем плавно повышается непрозрачность - opacity: 1; */
+        opacity: 1;
+        visibility: visible;
+        input{
+          width: 100%;
+          border: 0;
+          outline:none;
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 100%;
+          color: #000000;
+        }
+  
+      }
+      .search{
+        visibility: hidden;
+        transition: visibility 1s 1s, opacity 1s ease; /* при закрытии окна навигации, сначала плавно понижается непрозрачность - opacity: 0; затем мгновенно исчезает через 0.6s ожидания - visibility: hidden; */
+        opacity: 0;
+        display: none
+      }
+      .searchActive{
+        display: block;
+        transition: visibility 1s 1s, opacity 1s ease; /* при открытии окна навигации, оно сначала мгновенно появляется - visibility: visible;, затем плавно повышается непрозрачность - opacity: 1; */
+        opacity: 1;
+        visibility: visible;
+        margin-right: 12px;
+      }
+      ul{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        li{
+          height: 43px;
+          margin-right: 12px;
+          border-radius: 6px;
+          cursor: pointer;
+          transition: background-color 0.5s linear;
+          &:hover{
+            background: #E6E6E6;   
+          }
+        }
+      }
+    } 
+  }
+}
+
+.panel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .searchInput{
+    width: 240px;
+    height: 43px;
+    border: 2px solid #ffffff;
+    border-radius: 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+    margin-right: 12px;
+    visibility: hidden;
+    transition: visibility 0s 0.6s, opacity 0.6s ease; /* при закрытии окна навигации, сначала плавно понижается непрозрачность - opacity: 0; затем мгновенно исчезает через 0.6s ожидания - visibility: hidden; */
+    opacity: 0;
+    input{
+      width: 100%;
+      border: 0;
+      outline:none;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 100%;
+      color: #ffffff;
+      background: #4d4d4d;  
+      background-color:rgba(0, 0, 0, 0);
+
+    }
+  }
+  .searchInputActive{
+    width: 300px;
+    height: 43px;
+    border: 2px solid #ffffff;
+    border-radius: 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+    margin-right: 12px;
+    transition: visibility 0s 0s, opacity 0.6s ease; /* при открытии окна навигации, оно сначала мгновенно появляется - visibility: visible;, затем плавно повышается непрозрачность - opacity: 1; */
+    opacity: 1;
+    visibility: visible;
+    input{
+      width: 100%;
+      border: 0;
+      outline:none;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 100%;
+      color: #ffffff;
+      background-color:rgba(0, 0, 0, 0);
+    }
+
+  }
+  .search{
+    visibility: hidden;
+    transition: visibility 1s 1s, opacity 1s ease; /* при закрытии окна навигации, сначала плавно понижается непрозрачность - opacity: 0; затем мгновенно исчезает через 0.6s ожидания - visibility: hidden; */
+    opacity: 0;
+    display: none
+  }
+  .searchActive{
+    display: block;
+    transition: visibility 1s 1s, opacity 1s ease; /* при открытии окна навигации, оно сначала мгновенно появляется - visibility: visible;, затем плавно повышается непрозрачность - opacity: 1; */
+    opacity: 1;
+    visibility: visible;
+    margin-right: 12px;
+  }
+  ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    li{
+      height: 43px;
+      margin-right: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.5s linear;
+      &:hover{
+        background: rgba(255, 255, 255, 0.18);   
+      }
+    }
+  }
+} 

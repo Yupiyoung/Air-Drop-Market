@@ -1,0 +1,186 @@
+.popular{
+  margin-top: 30px;
+  width: 100%;
+  .popularName{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    h2{
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 100%;
+      text-align: center;
+      color: #000000;
+    }
+    p{
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+      text-align: center;
+      color: #000000;
+    }
+  }
+  .popularProductBlock{
+    overflow-x: scroll;
+    overflow-y:hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 24px;
+    width: 100%;
+    height: 270px;
+    background-color:#ffffff;
+    display: flex;
+    align-items: center;
+    .popularProductCard {
+      margin-right: 10px;
+      margin-left: 10px;
+      min-width: 500px;
+      height: 225px;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: row;
+      align-items: center;
+      transition: filter 0.5s linear;
+      border-radius: 18px;
+      background-color:#ffffff;
+      scroll-snap-align: start;
+      &:hover{
+        filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.1));
+      }
+      h3{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+        color: #000000;
+      }
+    }
+  }
+  .popularProductBlock::-webkit-scrollbar {
+    border-radius: 10px;
+    width: 10px;
+    height: 15px;
+    background-color: #f1f1f1;
+  }
+  
+  .popularProductBlock::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #E6E6E6;
+  }
+  
+  .popularProductBlock::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #f1f1f1;
+  }
+}
+
+
+.brand{
+  margin-top: 50px;
+  width: 100%;
+  .brandName{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    h2{
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 100%;
+      text-align: center;
+      color: #000000;
+    }
+    p{
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+      text-align: center;
+      color: #000000;
+    }
+  }
+  .brandProductBlockWrap{
+    overflow-x: scroll;
+    overflow-y:hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 24px;
+    width: 100%;
+    height: 540px;
+    background-color:#ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .brandProductBlock{
+      background-color:#ffffff;
+      display: grid;
+      grid-template-rows: repeat(2, 229px);
+      grid-auto-flow: column;
+      gap: 8px;
+      .brandProductCard {
+        margin-right: 10px;
+        margin-left: 10px;
+        min-width: auto;
+        height: 229px;
+        display: flex;
+        justify-content: space-evenly;
+        transition: filter 0.5s linear;
+        border-radius: 18px;
+        background-color:#ffffff;
+        scroll-snap-align: start;
+        &:hover{
+          filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.1));
+        }
+        h3{
+          font-family: 'Poppins';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 100%;
+          color: #000000;
+        }
+        img{
+          height: 220px;
+          border-radius: 18px;
+        }
+      }
+    }
+  }
+  .brandProductBlockWrap::-webkit-scrollbar {
+    border-radius: 10px;
+    width: 10px;
+    height: 15px;
+    background-color: #f1f1f1;
+  }
+  
+  .brandProductBlockWrap::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #E6E6E6;
+  }
+  
+  .brandProductBlockWrap::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #f1f1f1;
+  }
+}
+
+.slider{
+  width: 100%;
+}
+
+.dHfJrN {
+  display: grid;
+  grid-template-rows: repeat(5, 72px);
+  grid-auto-flow: column;
+  gap: 8px;
+  max-height: 432px;
+  overflow: hidden;
+  max-width: calc(100vw - 32px);
+}

@@ -109,17 +109,17 @@
 .navbarMobileTop{
   display: flex;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.74);
+  background: rgba(0, 0, 0, 0.808);
   backdrop-filter: blur(2px);
   padding: 0;
-  height: 60px;
+  height: 70px;
 }
 
 .navbarMobileBottom{
-  background: rgba(0, 0, 0, 0.74);
+  background: rgba(0, 0, 0, 0.808);
   backdrop-filter: blur(2px);
   padding: 0;
-  height: 60px;
+  height: 70px;
 }
 
 
@@ -163,6 +163,15 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
+      li{
+        width: 30px;
+        img{
+          width: 30px;
+        }
+      }
     }
+  }
+  .logo{
+    width: 150px;
   }
 }

@@ -4,7 +4,7 @@
   align-items: center;
   .searchInput{
     width: 240px;
-    height: 43px;
+    height: 33px;
     border: 2px solid #ffffff;
     border-radius: 11px;
     display: flex;
@@ -32,7 +32,7 @@
   }
   .searchInputActive{
     width: 300px;
-    height: 43px;
+    height: 33px;
     border: 2px solid #ffffff;
     border-radius: 11px;
     display: flex;
@@ -58,6 +58,7 @@
 
   }
   .search{
+    width: 33px;
     visibility: hidden;
     transition: visibility 1s 1s, opacity 1s ease; /* при закрытии окна навигации, сначала плавно понижается непрозрачность - opacity: 0; затем мгновенно исчезает через 0.6s ожидания - visibility: hidden; */
     opacity: 0;
@@ -65,6 +66,7 @@
   }
   .searchActive{
     display: block;
+    width: 33px;
     transition: visibility 1s 1s, opacity 1s ease; /* при открытии окна навигации, оно сначала мгновенно появляется - visibility: visible;, затем плавно повышается непрозрачность - opacity: 1; */
     opacity: 1;
     visibility: visible;
@@ -80,11 +82,14 @@
     li{
       display: flex;
       align-items: center;
-      height: 43px;
+      width: 33px;
       margin-right: 12px;
       border-radius: 6px;
       cursor: pointer;
       transition: background-color 0.5s linear;
+      img{
+        width: 33px;
+      }
       &:hover{
         background: rgba(255, 255, 255, 0.18);   
       }

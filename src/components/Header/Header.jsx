@@ -31,7 +31,7 @@ function Header() {
           }}>
           <Container>
             <Navbar.Brand href="/">
-              <img alt="Logo" src={Logo} className={headerStyle.logo}></img>
+              <img alt="Logo" src={Logo} className={headerStyle.logo} height="40px"></img>
             </Navbar.Brand>
             <div className={headerStyle.panel}>
               <div

@@ -16,55 +16,91 @@ function Header() {
 
   const [showMenu, setShowMenu] = React.useState(false);
 
+  const [navSize, setNavSize] = React.useState('pc');
+
+  const resizeComp = () => {
+    if (window.innerWidth <= 425) {
+      setNavSize('mobile');
+    } else {
+      setNavSize('pc');
+    }
+  };
+
   React.useEffect(() => {
-    console.log(document.body.scrollTop);
+    window.addEventListener('resize', resizeComp);
+    resizeComp();
+    return () => {
+      window.removeEventListener('resize', resizeComp);
+    };
   }, []);
   return (
     <>
       <header>
-        <Navbar
-          fixed="top"
-          style={{
-            background: 'rgba(0, 0, 0, 0.74)',
-            backdropFilter: 'blur(2px)',
-            padding: 0,
-          }}>
-          <Container>
-            <Navbar.Brand href="/">
-              <img alt="Logo" src={Logo} className={headerStyle.logo} height="40px"></img>
-            </Navbar.Brand>
-            <div className={headerStyle.panel}>
-              <div
-                className={showSearch ? headerStyle.searchInputActive : headerStyle.searchInput}
-                onMouseOver={() => setShowSearch(true)}
-                onMouseOut={() => setShowSearch(false)}>
-                <input placeholder="Поиск..." onChange={(e) => setSearch(e.target.value)}></input>
-                <img alt="Search" src={Search}></img>
+        {navSize === 'pc' ? (
+          <Navbar fixed="top" className={headerStyle.navbar}>
+            <Container style={{ justifyContent: 'space-between' }}>
+              <Navbar.Brand href="/">
+                <img alt="Logo" src={Logo} className={headerStyle.logo} height="40px"></img>
+              </Navbar.Brand>
+              <div className={headerStyle.panel}>
+                <div
+                  className={showSearch ? headerStyle.searchInputActive : headerStyle.searchInput}
+                  onMouseOver={() => setShowSearch(true)}
+                  onMouseOut={() => setShowSearch(false)}>
+                  <input placeholder="Поиск..." onChange={(e) => setSearch(e.target.value)}></input>
+                  <img alt="Search" src={Search}></img>
+                </div>
+                <img
+                  alt="Search"
+                  src={SearchIcon}
+                  className={!showSearch ? headerStyle.searchActive : headerStyle.search}
+                  onMouseOver={() => setShowSearch(true)}
+                  onMouseOut={() => setShowSearch(false)}></img>
+                <ul>
+                  <li>
+                    <img alt="Cart" src={Cart}></img>
+                  </li>
+                  <li>
+                    <img alt="User" src={User}></img>
+                  </li>
+                  <li onMouseOver={() => setShowMenu(true)}>
+                    <img alt="Menu" src={Menu}></img>
+                  </li>
+                </ul>
               </div>
-              <img
-                alt="Search"
-                src={SearchIcon}
-                className={!showSearch ? headerStyle.searchActive : headerStyle.search}
-                onMouseOver={() => setShowSearch(true)}
-                onMouseOut={() => setShowSearch(false)}></img>
-              <ul>
-                <li>
-                  <img alt="Cart" src={Cart}></img>
-                </li>
-                <li>
-                  <img alt="User" src={User}></img>
-                </li>
-                <li onMouseOver={() => setShowMenu(true)}>
-                  <img alt="Menu" src={Menu}></img>
-                </li>
-              </ul>
-            </div>
-          </Container>
-        </Navbar>
+            </Container>
+          </Navbar>
+        ) : null}
+        {navSize === 'mobile' ? (
+          <>
+            <Navbar fixed="top" className={headerStyle.navbarMobileTop}>
+              <Navbar.Brand href="/">
+                <img alt="Logo" src={Logo} className={headerStyle.logo} height="40px"></img>
+              </Navbar.Brand>
+            </Navbar>
+            <Navbar fixed="bottom" className={headerStyle.navbarMobileBottom}>
+              <Container style={{ justifyContent: 'center' }}>
+                <div className={headerStyle.panel}>
+                  <ul>
+                    <li>
+                      <img alt="Cart" src={Cart}></img>
+                    </li>
+                    <li>
+                      <img alt="User" src={User}></img>
+                    </li>
+                    <li onMouseOver={() => setShowMenu(true)}>
+                      <img alt="Menu" src={Menu}></img>
+                    </li>
+                  </ul>
+                </div>
+              </Container>
+            </Navbar>
+          </>
+        ) : null}
       </header>
       <Offcanvas
         show={showMenu}
-        placement="top"
+        placement="end"
         onHide={() => setShowMenu(false)}
         onMouseLeave={() => setShowMenu(false)}
         style={{ background: 'rgba(0, 0, 0, 0.74)', backdropFilter: 'blur(2px)' }}>

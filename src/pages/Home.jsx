@@ -9,11 +9,16 @@ import Sneakers1 from './Sneakers1.png';
 function Home() {
   return (
     <>
-      <div className={homeStyle.slider}>
-        <Carousel>
+      <div className={homeStyle.sliderWrap}>
+        <Carousel className={homeStyle.slider}>
           {[Slide1, Slide2, Slide3].map((el, index) => (
             <Carousel.Item key={`slide${index}`}>
-              <img className="w-100" src={el} alt="First slide" />
+              <img
+                className="w-100"
+                style={{ height: 'auto', objectFit: 'cover', objectPosition: '0 0' }}
+                src={el}
+                alt="First slide"
+              />
             </Carousel.Item>
           ))}
         </Carousel>

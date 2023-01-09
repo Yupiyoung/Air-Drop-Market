@@ -35,10 +35,11 @@
     background-color:#ffffff;
     display: flex;
     align-items: center;
+    padding: 0 10px ;
     .popularProductCard {
       margin-right: 10px;
       margin-left: 10px;
-      min-width: 500px;
+      width: 500px;
       height: 225px;
       display: flex;
       justify-content: space-evenly;
@@ -48,6 +49,7 @@
       border-radius: 18px;
       background-color:#ffffff;
       scroll-snap-align: start;
+      padding: 10px;
       &:hover{
         filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.1));
       }
@@ -58,6 +60,7 @@
         font-size: 20px;
         line-height: 100%;
         color: #000000;
+        width: 250px;
       }
     }
   }
@@ -118,6 +121,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding: 0 10px;
     .brandProductBlock{
       background-color:#ffffff;
       display: grid;
@@ -138,14 +142,7 @@
         &:hover{
           filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.1));
         }
-        h3{
-          font-family: 'Poppins';
-          font-style: normal;
-          font-weight: 400;
-          font-size: 20px;
-          line-height: 100%;
-          color: #000000;
-        }
+        
         img{
           height: 220px;
           border-radius: 18px;
@@ -176,3 +173,111 @@
   height: 100%;
 }
  
+
+@media screen and (max-width: 992px) {
+  .popularName{
+    h2{
+      font-size: 25px !important;
+    }
+    p{
+      font-size: 12px !important;
+    }
+  }
+  .popularProductBlock{
+    height: 250px !important;
+    .popularProductCard {
+      height: 205px !important;
+      img{
+        height: 200px;
+      }
+      h3{
+        font-size: 18px !important;
+        width: 200px !important;
+      }
+    }
+  }
+  .popularProductBlock::-webkit-scrollbar {
+    height: 10px !important;
+  }
+  .brand{
+    .brandName{
+      h2{
+        font-size: 25px;
+      }
+      p{
+        font-size: 12px;
+      }
+    }
+    .brandProductBlockWrap{
+      height: 500px;
+      .brandProductBlock{
+        grid-template-rows: repeat(2, 200px);
+        gap: 8px;
+        .brandProductCard {
+          height: 200px;
+          img{
+            height: 200px;
+            border-radius: 18px;
+          }
+        }
+      }
+    }
+    .brandProductBlockWrap::-webkit-scrollbar {
+      height: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .popularName{
+    h2{
+      font-size: 22px !important;
+    }
+    p{
+      font-size: 10px !important;
+    }
+  }
+  .popularProductBlock{
+    height: 180px !important;
+    .popularProductCard {
+      height: 135px !important;
+      img{
+        height: 130px;
+      }
+      h3{
+        font-size: 12px !important;
+        width: 130px !important;
+      }
+    }
+  }
+  .popularProductBlock::-webkit-scrollbar {
+    height: 10px !important;
+  }
+  .brand{
+    .brandName{
+      h2{
+        font-size: 22px;
+      }
+      p{
+        font-size: 10px;
+      }
+    }
+    .brandProductBlockWrap{
+      height: 315px;
+      .brandProductBlock{
+        grid-template-rows: repeat(2, 130px);
+        gap: 8px;
+        .brandProductCard {
+          height: 130px;
+          img{
+            height: 130px;
+            border-radius: 18px;
+          }
+        }
+      }
+    }
+    .brandProductBlockWrap::-webkit-scrollbar {
+      height: 10px;
+    }
+  }
+}

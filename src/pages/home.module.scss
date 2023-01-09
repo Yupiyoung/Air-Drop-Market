@@ -173,14 +173,5 @@
 
 .slider{
   width: 100%;
-}
-
-.dHfJrN {
-  display: grid;
-  grid-template-rows: repeat(5, 72px);
-  grid-auto-flow: column;
-  gap: 8px;
-  max-height: 432px;
-  overflow: hidden;
-  max-width: calc(100vw - 32px);
+  height: 100%;
 }

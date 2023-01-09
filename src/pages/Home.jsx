@@ -18,7 +18,7 @@ function Home() {
           ))}
         </Carousel>
       </div>
-      <div className="container">
+      {/* <div className="container">
         <div className={homeStyle.popular}>
           <div className={homeStyle.popularName}>
             <h2>Популярные товары</h2>
@@ -63,7 +63,7 @@ function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

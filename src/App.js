@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import Home from './pages/Home';
+import New from './pages/New';
 
 function App() {
   const [mobileBottom, setMobileBottom] = React.useState(false)
@@ -25,6 +26,7 @@ function App() {
         <Header></Header>
       </div>
       <Home></Home>
+      <New></New>
     </div>
   );
 }

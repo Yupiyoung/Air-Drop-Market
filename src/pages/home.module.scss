@@ -50,6 +50,9 @@
       background-color:#ffffff;
       scroll-snap-align: start;
       padding: 10px;
+      &:checked{
+        filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.1));
+      }
       &:hover{
         filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.1));
       }
@@ -84,7 +87,7 @@
 
 
 .brand{
-  margin-top: 50px;
+  margin-top: 20px;
   width: 100%;
   .brandName{
     width: 100%;
@@ -174,6 +177,145 @@
 }
  
 
+// @media screen and (max-width: 992px) {
+//   .popularName{
+//     h2{
+//       font-size: 25px !important;
+//     }
+//     p{
+//       font-size: 12px !important;
+//     }
+//   }
+//   .popularProductBlock{
+//     height: 250px !important;
+//     .popularProductCard {
+//       height: 205px !important;
+//       img{
+//         height: 200px;
+//       }
+//       h3{
+//         font-size: 18px !important;
+//         width: 200px !important;
+//       }
+//     }
+//   }
+//   .popularProductBlock::-webkit-scrollbar {
+//     height: 10px !important;
+//   }
+//   .brand{
+//     .brandName{
+//       h2{
+//         font-size: 25px;
+//       }
+//       p{
+//         font-size: 12px;
+//       }
+//     }
+//     .brandProductBlockWrap{
+//       height: 500px;
+//       .brandProductBlock{
+//         grid-template-rows: repeat(2, 200px);
+//         gap: 8px;
+//         .brandProductCard {
+//           height: 200px;
+//           img{
+//             height: 200px;
+//             border-radius: 18px;
+//           }
+//         }
+//       }
+//     }
+//     .brandProductBlockWrap::-webkit-scrollbar {
+//       height: 10px;
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 768px) {
+//   .popularName{
+//     h2{
+//       font-size: 22px !important;
+//     }
+//     p{
+//       font-size: 10px !important;
+//     }
+//   }
+//   .popularProductBlock{
+//     height: 180px !important;
+//     .popularProductCard {
+//       height: 135px !important;
+//       img{
+//         height: 130px;
+//       }
+//       h3{
+//         font-size: 12px !important;
+//         width: 130px !important;
+//       }
+//     }
+//   }
+//   .popularProductBlock::-webkit-scrollbar {
+//     height: 10px !important;
+//   }
+//   .brand{
+//     .brandName{
+//       h2{
+//         font-size: 22px;
+//       }
+//       p{
+//         font-size: 10px;
+//       }
+//     }
+//     .brandProductBlockWrap{
+//       height: 315px;
+//       .brandProductBlock{
+//         grid-template-rows: repeat(2, 130px);
+//         gap: 8px;
+//         .brandProductCard {
+//           height: 130px;
+//           img{
+//             height: 130px;
+//             border-radius: 18px;
+//           }
+//         }
+//       }
+//     }
+//     .brandProductBlockWrap::-webkit-scrollbar {
+//       height: 10px;
+//     }
+//   }
+// }
+
+.popular{
+  .popularProductBlockNew{
+    background-color:#ffffff;
+    .popularProductCardNew {
+      margin: 20px;
+      width: calc(100% - 40px);
+      height: 225px;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: row;
+      align-items: center;
+      transition: filter 0.5s linear;
+      border-radius: 18px;
+      background-color:#ffffff;
+      padding: 10px;
+      &:hover{
+        filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.1));
+      }
+      h3{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+        color: #000000;
+        width: 250px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 992px) {
   .popularName{
     h2{
@@ -183,9 +325,8 @@
       font-size: 12px !important;
     }
   }
-  .popularProductBlock{
-    height: 250px !important;
-    .popularProductCard {
+  .popularProductBlockNew{
+    .popularProductCardNew {
       height: 205px !important;
       img{
         height: 200px;
@@ -195,9 +336,6 @@
         width: 200px !important;
       }
     }
-  }
-  .popularProductBlock::-webkit-scrollbar {
-    height: 10px !important;
   }
   .brand{
     .brandName{
@@ -237,9 +375,8 @@
       font-size: 10px !important;
     }
   }
-  .popularProductBlock{
-    height: 180px !important;
-    .popularProductCard {
+  .popularProductBlockNew{
+    .popularProductCardNew {
       height: 135px !important;
       img{
         height: 130px;
@@ -249,9 +386,6 @@
         width: 130px !important;
       }
     }
-  }
-  .popularProductBlock::-webkit-scrollbar {
-    height: 10px !important;
   }
   .brand{
     .brandName{

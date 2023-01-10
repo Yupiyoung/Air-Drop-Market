@@ -18,6 +18,8 @@ function Header() {
   const [search, setSearch] = React.useState('');
 
   const [showMenu, setShowMenu] = React.useState(false);
+  const [showCart, setShowCart] = React.useState(false);
+  const [showSearchWindow, setShowSearchWindow] = React.useState(false);
 
   const [navSize, setNavSize] = React.useState('pc');
 
@@ -85,7 +87,7 @@ function Header() {
               <Container style={{ justifyContent: 'center' }}>
                 <div className={headerStyle.panel}>
                   <ul>
-                    <li>
+                    <li onClick={() => setShowCart(true)}>
                       <img alt="Cart" src={Cart}></img>
                     </li>
                     <li>
@@ -93,6 +95,9 @@ function Header() {
                     </li>
                     <li onMouseOver={() => setShowMenu(true)}>
                       <img alt="Menu" src={Menu}></img>
+                    </li>
+                    <li onClick={() => setShowSearchWindow(true)}>
+                      <img alt="Search" src={SearchIcon}></img>
                     </li>
                   </ul>
                 </div>
@@ -112,7 +117,9 @@ function Header() {
           width: '100%',
         }}>
         <Offcanvas.Header closeButton closeVariant="white">
-          <Offcanvas.Title></Offcanvas.Title>
+          <Offcanvas.Title style={{ color: '#ffffff', fontStyle: 'Montserrat' }}>
+            Меню
+          </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body style={{ display: 'flex', justifyContent: 'center' }}>
           <div className={headerStyle.navMenu}>
@@ -131,6 +138,38 @@ function Header() {
             </div>
           </div>
         </Offcanvas.Body>
+      </Offcanvas>
+      <Offcanvas
+        show={showSearchWindow}
+        placement="end"
+        onHide={() => setShowCart(false)}
+        style={{
+          background: 'rgba(0, 0, 0, 0.74)',
+          backdropFilter: 'blur(2px)',
+          width: '100%',
+        }}>
+        <Offcanvas.Header closeButton closeVariant="white">
+          <Offcanvas.Title style={{ color: '#ffffff', fontStyle: 'Montserrat' }}>
+            Поиск
+          </Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body style={{ display: 'flex', justifyContent: 'center' }}></Offcanvas.Body>
+      </Offcanvas>
+      <Offcanvas
+        show={showCart}
+        placement="end"
+        onHide={() => setShowCart(false)}
+        style={{
+          background: 'rgba(0, 0, 0, 0.74)',
+          backdropFilter: 'blur(2px)',
+          width: '100%',
+        }}>
+        <Offcanvas.Header closeButton closeVariant="white">
+          <Offcanvas.Title style={{ color: '#ffffff', fontStyle: 'Montserrat' }}>
+            Корзина
+          </Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body style={{ display: 'flex', justifyContent: 'center' }}></Offcanvas.Body>
       </Offcanvas>
     </>
   );

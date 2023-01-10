@@ -6,6 +6,9 @@ import Menu from './Icons/Menu.svg';
 import User from './Icons/User.svg';
 import Search from './Icons/Search.svg';
 import SearchIcon from './Icons/SearchIcon.svg';
+import VK from './Icons/VK.svg';
+import Telegram from './Icons/Telegram.svg';
+import Instagram from './Icons/Instagram.svg';
 
 import headerStyle from './header.module.scss';
 import { Carousel, Container, Nav, Navbar, NavDropdown, Offcanvas } from 'react-bootstrap';
@@ -103,11 +106,31 @@ function Header() {
         placement="end"
         onHide={() => setShowMenu(false)}
         onMouseLeave={() => setShowMenu(false)}
-        style={{ background: 'rgba(0, 0, 0, 0.74)', backdropFilter: 'blur(2px)' }}>
-        <Offcanvas.Header>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+        style={{
+          background: 'rgba(0, 0, 0, 0.74)',
+          backdropFilter: 'blur(2px)',
+          width: '100%',
+        }}>
+        <Offcanvas.Header closeButton closeVariant="white">
+          <Offcanvas.Title></Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body></Offcanvas.Body>
+        <Offcanvas.Body style={{ display: 'flex', justifyContent: 'center' }}>
+          <div className={headerStyle.navMenu}>
+            <h2>Каталог</h2>
+            <h2>Отследить заказ</h2>
+            <h2>О нас</h2>
+            <h2>Доставка и оплата</h2>
+            <h2>Контакты</h2>
+            <h2>Отзывы</h2>
+            <div className={headerStyle.socialNetworks}>
+              {[VK, Telegram, Instagram].map((el, index) => (
+                <a key={`socialNetworks${index}`}>
+                  <img alt="el" height="25px" src={el}></img>
+                </a>
+              ))}
+            </div>
+          </div>
+        </Offcanvas.Body>
       </Offcanvas>
     </>
   );

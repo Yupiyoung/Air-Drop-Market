@@ -122,7 +122,27 @@
   height: 70px;
 }
 
-
+.navMenu{
+  width: 100%;
+  h2{
+    font-style: 'Montserrat';
+    transition: background-color ease-in 0.4s;
+    color:#ffffff;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    &:hover{
+    background: rgba(255, 255, 255, 0.171);
+    }
+  }
+  .socialNetworks{
+    display: flex;
+    margin: 0 auto;
+    margin-top: 30px;
+    justify-content: space-between;
+    width: 150px;
+  }
+}
 
 @media screen and (max-width: 992px) {
   .searchInput{

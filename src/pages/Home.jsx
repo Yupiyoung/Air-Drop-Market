@@ -9,8 +9,18 @@ import Slide3 from './Slide3.jpg';
 import Sneakers1 from './Sneakers1.png';
 
 function Home() {
-  const [slider, setSlider] = React.useState(2);
-  const [sliderSpace, setSliderSpace] = React.useState(500);
+  const [brandsScroll, setBrandsScroll] = React.useState(0);
+  const activeSlideRef = React.useRef(null);
+  const changeBrandScroll = () => {
+    const width = activeSlideRef.current.scrollWidth - 364;
+    const object = 110;
+    const total = ~~(width / object);
+    console.log(total - ~~((width - activeSlideRef.current.scrollLeft) / object));
+  };
+  React.useEffect(() => {
+    activeSlideRef.current.addEventListener('scroll', changeBrandScroll);
+    return () => activeSlideRef.current.removeEventListener('scroll', changeBrandScroll);
+  }, []);
   // const resizeComp = () => {
   //   if (window.innerWidth <= 992) {
   //     setSlider(4);
@@ -100,9 +110,13 @@ function Home() {
           <div className={homeStyle.brandIconsName}>
             <h2>Бренды</h2>
           </div>
-          <div className={homeStyle.brandIconsWrap}>
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((element, index) => (
-              <div className={homeStyle.brandIconCard}>
+          <div className={homeStyle.brandIconsWrap} ref={activeSlideRef}>
+            {[0, 1, 2, 3, 4].map((element, index) => (
+              <div
+                onClick={() => console.log(index)}
+                className={
+                  brandsScroll === index ? homeStyle.brandIconCardActive : homeStyle.brandIconCard
+                }>
                 <img
                   alt="Sneakers1"
                   src="https://cdn-icons-png.flaticon.com/512/732/732084.png"></img>

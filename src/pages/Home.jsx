@@ -43,7 +43,7 @@ function Home() {
           }
           .swiper-scrollbar.swiper-scrollbar-horizontal{    
             border-radius: 10px;
-            height: 15px;
+            height: 10px;
             background-color: #f1f1f1;
           }
           .swiper-scrollbar-drag{    
@@ -51,7 +51,7 @@ function Home() {
             background-color: #E6E6E6;
           }
           .swiper-wrapper{
-            padding-bottom: 25px;
+            padding-bottom: 15px;
           }
           `}
       </style>
@@ -95,6 +95,20 @@ function Home() {
               </div>
             ))}
           </div> */}
+        </div>
+        <div className={homeStyle.brandIcons}>
+          <div className={homeStyle.brandIconsName}>
+            <h2>Бренды</h2>
+          </div>
+          <div className={homeStyle.brandIconsWrap}>
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((element, index) => (
+              <div className={homeStyle.brandIconCard}>
+                <img
+                  alt="Sneakers1"
+                  src="https://cdn-icons-png.flaticon.com/512/732/732084.png"></img>
+              </div>
+            ))}
+          </div>
         </div>
         <div className={homeStyle.brand}>
           <div className={homeStyle.brandName}>

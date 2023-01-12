@@ -1,6 +1,7 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Scrollbar } from 'swiper';
 import homeStyle from './home.module.scss';
 import Slide1 from './Slide1.jpg';
 import Slide2 from './Slide2.jpg';
@@ -35,6 +36,25 @@ function Home() {
   // }, []);
   return (
     <>
+      <style>
+        {`.swiper-slide-active{
+          filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.1));
+          transition: filter 0.5s linear;
+          }
+          .swiper-scrollbar.swiper-scrollbar-horizontal{    
+            border-radius: 10px;
+            height: 15px;
+            background-color: #f1f1f1;
+          }
+          .swiper-scrollbar-drag{    
+            border-radius: 10px;
+            background-color: #E6E6E6;
+          }
+          .swiper-wrapper{
+            padding-bottom: 25px;
+          }
+          `}
+      </style>
       <div className={homeStyle.sliderWrap}>
         <Carousel className={homeStyle.slider}>
           {[Slide1, Slide2, Slide3].map((el, index) => (
@@ -56,7 +76,7 @@ function Home() {
             <p>Показать все</p>
           </div>
           <div className={homeStyle.popularProductBlockNew}>
-            <Swiper slidesPerView={1}>
+            <Swiper slidesPerView={1} modules={[Scrollbar]} scrollbar={{ draggable: true }}>
               {[Sneakers1, Sneakers1, Sneakers1, Sneakers1, Sneakers1].map((element, index) => (
                 <SwiperSlide key={`slide${index}`}>
                   <div className={homeStyle.popularProductCardNew}>

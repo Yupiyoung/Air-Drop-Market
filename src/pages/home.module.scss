@@ -119,6 +119,7 @@
       padding: 10px;
       min-width: 130px;
       max-width: 130px;
+      
       &:hover{
         filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.1));
       }
@@ -238,24 +239,22 @@
       text-align: center;
       color: #000000;
     }
-    p{
-      font-family: 'Montserrat';
-      font-style: normal;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 100%;
-      text-align: center;
-      color: #000000;
-    }
   }
   .aboutUsInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    padding: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-top: 10px;
+    filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.1));
     p{
       font-family: 'Montserrat';
       font-style: normal;
       font-weight: 500;
-      font-size: 15px;
+      font-size: 20px;
       color: #000000;
       margin: 0;
     }
@@ -280,6 +279,8 @@
     }
   }
   .faqSwiper{
+    display: flex;
+    align-items: center;
     .faqCard{
       margin: 20px;
       padding: 20px;
@@ -290,7 +291,7 @@
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 600;
-        font-size: 20px;
+        font-size: 25px;
         line-height: 100%;
         color: #000000;
       }
@@ -298,14 +299,14 @@
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
-        font-size: 14px;
-        line-height: 100%;
+        font-size: 20px;
         color: #000000;
         margin: 0;
       }
     }
   }
 }
+
 @media screen and (max-width: 992px) {
   .popularName{
     h2{
@@ -391,7 +392,6 @@
     }
   }
 }
-
 @media screen and (max-width: 768px) {
   .popularName{
     h2{
@@ -469,13 +469,35 @@
       }
     }
     .aboutUsInfo{
-
+      p{
+        font-size: 15px;
+      }
     }
   }
   .faq{
     .faqName{
       h2{
         font-size: 22px;
+      }
+    }
+    .faqSwiper{
+      .faqCard{
+        h2{
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 100%;
+          color: #000000;
+        }
+        p{
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          color: #000000;
+          margin: 0;
+        }
       }
     }
   }

@@ -10,6 +10,11 @@ import Sneakers1 from './Sneakers1.png';
 import Expand_left from './Expand_left.svg';
 import Expand_right from './Expand_right.svg';
 
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
 function Home() {
   const [brandsScroll, setBrandsScroll] = React.useState(0);
 
@@ -194,6 +199,14 @@ function Home() {
               Nice, 95. Мы предоставляем авиатранспортный вид доставки, на данный момент это
               является самым быстрым и безопасным способом доставки. Мы старается предоставить вам
               самые быстрые сроки доставки, а так же приятный курс.
+            </p>
+          </div>
+          <div className={homeStyle.aboutUsInfo}>
+            <p>
+              Air Drop Market работает со всеми крупными логистическими компаниями при доставке
+              товаров до России. Для каждой вашей покупки мы выбираем наилучший вариант доставки по
+              всему миру. Затем товар передаём компании СДЭК для того, чтобы посылка пришла по
+              адресу в России. Скорость доставки зависит от страны продавца.
             </p>
           </div>
         </div>

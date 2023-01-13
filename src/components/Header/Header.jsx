@@ -11,7 +11,7 @@ import Telegram from './Icons/Telegram.svg';
 import Instagram from './Icons/Instagram.svg';
 
 import headerStyle from './header.module.scss';
-import { Carousel, Container, Nav, Navbar, NavDropdown, Offcanvas } from 'react-bootstrap';
+import { Container, Navbar, Offcanvas } from 'react-bootstrap';
 
 function Header() {
   const [showSearch, setShowSearch] = React.useState(false);
@@ -31,11 +31,22 @@ function Header() {
     }
   };
 
+  const [showNavTop, setShowNavTop] = React.useState(true);
+  const scrollNavPhone = () => {
+    if (100 < window.scrollY) {
+      setShowNavTop(false);
+    } else {
+      setShowNavTop(true);
+    }
+  };
+
   React.useEffect(() => {
     window.addEventListener('resize', resizeComp);
     resizeComp();
+    window.addEventListener('scroll', scrollNavPhone);
     return () => {
       window.removeEventListener('resize', resizeComp);
+      window.removeEventListener('scroll', scrollNavPhone);
     };
   }, []);
   return (
@@ -78,7 +89,11 @@ function Header() {
         ) : null}
         {navSize === 'mobile' ? (
           <>
-            <Navbar fixed="top" className={headerStyle.navbarMobileTop}>
+            <Navbar
+              fixed="top"
+              className={
+                showNavTop ? headerStyle.navbarMobileTopActive : headerStyle.navbarMobileTop
+              }>
               <Navbar.Brand href="/">
                 <img alt="Logo" src={Logo} className={headerStyle.logo} height="40px"></img>
               </Navbar.Brand>
@@ -176,35 +191,3 @@ function Header() {
 }
 
 export default Header;
-
-// {/* <nav className={headerStyle.navbar}>
-//   {/* <a href="/">
-//     <img alt="Logo" src={Logo} className={headerStyle.logo}></img>
-//   </a> */}
-//   <div className={headerStyle.panel}>
-//     <div
-//       className={showSearch ? headerStyle.searchInputActive : headerStyle.searchInput}
-//       onMouseOver={() => setShowSearch(true)}
-//       onMouseOut={() => setShowSearch(false)}>
-//       <input placeholder="Поиск..." onChange={(e) => setSearch(e.target.value)}></input>
-//       <img alt="Search" src={Search}></img>
-//     </div>
-//     <img
-//       alt="Search"
-//       src={SearchIcon}
-//       className={!showSearch ? headerStyle.searchActive : headerStyle.search}
-//       onMouseOver={() => setShowSearch(true)}
-//       onMouseOut={() => setShowSearch(false)}></img>
-//     <ul>
-//       <li>
-//         <img alt="Cart" src={Cart}></img>
-//       </li>
-//       <li>
-//         <img alt="User" src={User}></img>
-//       </li>
-//       <li onMouseOver={() => setShowMenu(true)}>
-//         <img alt="Menu" src={Menu}></img>
-//       </li>
-//     </ul>
-//   </div>
-// </nav>

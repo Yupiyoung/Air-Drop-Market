@@ -1,87 +1,3 @@
-// .popular{
-//   margin-top: 30px;
-//   width: 100%;
-//   .popularName{
-//     width: 100%;
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: end;
-//     h2{
-//       font-family: 'Montserrat';
-//       font-style: normal;
-//       font-weight: 600;
-//       font-size: 36px;
-//       line-height: 100%;
-//       text-align: center;
-//       color: #000000;
-//     }
-//     p{
-//       font-family: 'Montserrat';
-//       font-style: normal;
-//       font-weight: 500;
-//       font-size: 14px;
-//       line-height: 100%;
-//       text-align: center;
-//       color: #000000;
-//     }
-//   }
-//   .popularProductBlock{
-//     overflow-x: scroll;
-//     overflow-y:hidden;
-//     scroll-snap-type: x mandatory;
-//     scroll-padding: 24px;
-//     width: 100%;
-//     height: 300px;
-//     background-color:#ffffff;
-//     display: flex;
-//     align-items: center;
-//     padding: 0 10px ;
-//     .popularProductCard {
-//       margin-right: 10px;
-//       margin-left: 10px;
-//       width: 500px;
-//       height: 225px;
-//       display: flex;
-//       justify-content: space-evenly;
-//       flex-direction: row;
-//       align-items: center;
-//       transition: filter 0.5s linear;
-//       border-radius: 18px;
-//       background-color:#ffffff;
-//       scroll-snap-align: start;
-//       padding: 10px;
-//       // &:hover{
-//       //   filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.1));
-//       // }
-//       h3{
-//         font-family: 'Poppins';
-//         font-style: normal;
-//         font-weight: 400;
-//         font-size: 20px;
-//         line-height: 100%;
-//         color: #000000;
-//         width: 250px;
-//       }
-//     }
-//   }
-//   .swiper-scrollbar::-webkit-scrollbar {
-//     border-radius: 10px;
-//     width: 10px;
-//     height: 15px;
-//     background-color: #f1f1f1;
-//   }
-  
-//   .swiper-scrollbar::-webkit-scrollbar-thumb {
-//     border-radius: 10px;
-//     background-color: #E6E6E6;
-//   }
-  
-//   .swiper-scrollbar::-webkit-scrollbar-track {
-//     border-radius: 10px;
-//     background-color: #f1f1f1;
-//   }
-// }
-
 .brand{
   margin-top: 30px;
   width: 100%;
@@ -165,7 +81,6 @@
     background-color: #f1f1f1;
   }
 }
-
 .brandIcons{
   margin-top: 30px;
   width: 100%;
@@ -246,122 +161,10 @@
     background-color: #f1f1f1;
   }
 }
-
 .sliderWrap{
   width: 100%;
   height: 100%;
 }
- 
-
-
-// @media screen and (max-width: 992px) {
-//   .popularName{
-//     h2{
-//       font-size: 25px !important;
-//     }
-//     p{
-//       font-size: 12px !important;
-//     }
-//   }
-//   .popularProductBlock{
-//     height: 250px !important;
-//     .popularProductCard {
-//       height: 205px !important;
-//       img{
-//         height: 200px;
-//       }
-//       h3{
-//         font-size: 18px !important;
-//         width: 200px !important;
-//       }
-//     }
-//   }
-//   .popularProductBlock::-webkit-scrollbar {
-//     height: 10px !important;
-//   }
-//   .brand{
-//     .brandName{
-//       h2{
-//         font-size: 25px;
-//       }
-//       p{
-//         font-size: 12px;
-//       }
-//     }
-//     .brandProductBlockWrap{
-//       height: 500px;
-//       .brandProductBlock{
-//         grid-template-rows: repeat(2, 200px);
-//         gap: 8px;
-//         .brandProductCard {
-//           height: 200px;
-//           img{
-//             height: 200px;
-//             border-radius: 18px;
-//           }
-//         }
-//       }
-//     }
-//     .brandProductBlockWrap::-webkit-scrollbar {
-//       height: 10px;
-//     }
-//   }
-// }
-
-// @media screen and (max-width: 768px) {
-//   .popularName{
-//     h2{
-//       font-size: 22px !important;
-//     }
-//     p{
-//       font-size: 10px !important;
-//     }
-//   }
-//   .popularProductBlock{
-//     height: 180px !important;
-//     .popularProductCard {
-//       height: 135px !important;
-//       img{
-//         height: 130px;
-//       }
-//       h3{
-//         font-size: 12px !important;
-//         width: 130px !important;
-//       }
-//     }
-//   }
-//   .popularProductBlock::-webkit-scrollbar {
-//     height: 10px !important;
-//   }
-//   .brand{
-//     .brandName{
-//       h2{
-//         font-size: 22px;
-//       }
-//       p{
-//         font-size: 10px;
-//       }
-//     }
-//     .brandProductBlockWrap{
-//       height: 315px;
-//       .brandProductBlock{
-//         grid-template-rows: repeat(2, 130px);
-//         gap: 8px;
-//         .brandProductCard {
-//           height: 130px;
-//           img{
-//             height: 130px;
-//             border-radius: 18px;
-//           }
-//         }
-//       }
-//     }
-//     .brandProductBlockWrap::-webkit-scrollbar {
-//       height: 10px;
-//     }
-//   }
-// }
-
 .popular{
   margin-top: 30px;
   width: 100%;
@@ -415,6 +218,46 @@
         color: #000000;
         width: 250px;
       }
+    }
+  }
+}
+.aboutUs{
+  margin-top: 30px;
+  width: 100%;
+  .aboutUsName{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h2{
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 100%;
+      text-align: center;
+      color: #000000;
+    }
+    p{
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+      text-align: center;
+      color: #000000;
+    }
+  }
+  .aboutUsInfo{
+    width: 100%;
+    padding: 10px;
+    p{
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      color: #000000;
+      margin: 0;
     }
   }
 }
@@ -486,6 +329,16 @@
       }
     }
   }
+  .aboutUs{
+    .aboutUsName{
+      h2{
+        font-size: 25px;
+      }
+      p{
+        font-size: 12px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -553,6 +406,19 @@
           height: 50px;
         }
       }
+    }
+  }
+  .aboutUs{
+    .aboutUsName{
+      h2{
+        font-size: 22px;
+      }
+      p{
+        font-size: 10px;
+      }
+    }
+    .aboutUsInfo{
+
     }
   }
 }

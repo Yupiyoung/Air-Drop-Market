@@ -98,6 +98,7 @@ function Home() {
           </div>
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <img
+              style={{ cursor: 'pointer' }}
               alt="Expand_left"
               height="20px"
               src={Expand_left}
@@ -117,6 +118,7 @@ function Home() {
               ))}
             </div>
             <img
+              style={{ cursor: 'pointer' }}
               alt="Expand_right"
               height="20px"
               src={Expand_right}
@@ -128,14 +130,28 @@ function Home() {
             <h2>Nike</h2>
             <p>Показать все</p>
           </div>
-          <div className={homeStyle.brandProductBlockWrap}>
-            <div className={homeStyle.brandProductBlock}>
-              {[1, 2, 3, 4, 5, 6, 7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0].map((element, index) => (
-                <div className={homeStyle.brandProductCard} key={`brandProductBlock1${index}`}>
-                  <img alt="Sneakers1" src={Sneakers1}></img>
-                </div>
-              ))}
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <img
+              style={{ cursor: 'pointer' }}
+              alt="Expand_left"
+              height="20px"
+              src={Expand_left}
+              onClick={() => clickLeftButtonScroll(150)}></img>
+            <div className={homeStyle.brandProductBlockWrap}>
+              <div className={homeStyle.brandProductBlock}>
+                {[1, 2, 3, 4, 5, 6, 7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0].map((element, index) => (
+                  <div className={homeStyle.brandProductCard} key={`brandProductBlock1${index}`}>
+                    <img alt="Sneakers1" src={Sneakers1}></img>
+                  </div>
+                ))}
+              </div>
             </div>
+            <img
+              style={{ cursor: 'pointer' }}
+              alt="Expand_right"
+              height="20px"
+              src={Expand_right}
+              onClick={() => clickRightButtonScroll(150)}></img>
           </div>
         </div>
         <div className={homeStyle.brand}>
@@ -143,14 +159,42 @@ function Home() {
             <h2>Yeezy</h2>
             <p>Показать все</p>
           </div>
-          <div className={homeStyle.brandProductBlockWrap}>
-            <div className={homeStyle.brandProductBlock}>
-              {[1, 2, 3, 4, 5, 6, 7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0].map((element, index) => (
-                <div className={homeStyle.brandProductCard} key={`brandProductBlock2${index}`}>
-                  <img alt="Sneakers1" src={Sneakers1}></img>
-                </div>
-              ))}
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <img
+              style={{ cursor: 'pointer' }}
+              alt="Expand_left"
+              height="20px"
+              src={Expand_left}
+              onClick={() => clickLeftButtonScroll(150)}></img>
+            <div className={homeStyle.brandProductBlockWrap}>
+              <div className={homeStyle.brandProductBlock}>
+                {[1, 2, 3, 4, 5, 6, 7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0].map((element, index) => (
+                  <div className={homeStyle.brandProductCard} key={`brandProductBlock2${index}`}>
+                    <img alt="Sneakers1" src={Sneakers1}></img>
+                  </div>
+                ))}
+              </div>
             </div>
+            <img
+              style={{ cursor: 'pointer' }}
+              alt="Expand_right"
+              height="20px"
+              src={Expand_right}
+              onClick={() => clickRightButtonScroll(150)}></img>
+          </div>
+        </div>
+        <div className={homeStyle.aboutUs}>
+          <div className={homeStyle.aboutUsName}>
+            <h2>О нас</h2>
+          </div>
+          <div className={homeStyle.aboutUsInfo}>
+            <p>
+              Наш сервис предоставляет услуги доставки и выкупом лимитированных вещей из Европы и
+              Китая. С помощью нас вы можете сделать заказ в Китае с таких площадок как Poizon,
+              Nice, 95. Мы предоставляем авиатранспортный вид доставки, на данный момент это
+              является самым быстрым и безопасным способом доставки. Мы старается предоставить вам
+              самые быстрые сроки доставки, а так же приятный курс.
+            </p>
           </div>
         </div>
       </div>

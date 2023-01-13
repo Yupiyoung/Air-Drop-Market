@@ -197,6 +197,30 @@ function Home() {
             </p>
           </div>
         </div>
+        <div className={homeStyle.faq}>
+          <div className={homeStyle.faqName}>
+            <h2>Как мы работаем?</h2>
+          </div>
+          <div className={homeStyle.faqSwiper}>
+            <Swiper slidesPerView={1} modules={[Scrollbar]} scrollbar={{ draggable: true }}>
+              {[
+                'Клиент выбирает услугу 1 из трех (Приобретение конкретного товара/Приобретение конкретного товара в конкретном магазине или на конкретной площадке/Получение товара на адрес)',
+                'Мы узнаем стоимость товара и доставки у наших партнеров',
+                'Мы согласовываем цены с Клиентом',
+                'Мы получаем подтверждение от Клиента и высылаем ему договор по которому оплата будет приравнивается к подписанию договора, указано в пункте 8 договора',
+                'Мы получаем средства',
+                'Клиент получает товар',
+              ].map((element, index) => (
+                <SwiperSlide key={`slideFaq${index}`}>
+                  <div className={homeStyle.faqCard}>
+                    <h2>{`Шаг ${index + 1}`}</h2>
+                    <p>{element}</p>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
       </div>
     </>
   );

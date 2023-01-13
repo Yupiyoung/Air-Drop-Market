@@ -142,7 +142,7 @@ function Header() {
       <Offcanvas
         show={showSearchWindow}
         placement="end"
-        onHide={() => setShowCart(false)}
+        onHide={() => setShowSearchWindow(false)}
         style={{
           background: 'rgba(0, 0, 0, 0.74)',
           backdropFilter: 'blur(2px)',

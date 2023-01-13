@@ -261,7 +261,51 @@
     }
   }
 }
-
+.faq{
+  margin-top: 30px;
+  width: 100%;
+  .faqName{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h2{
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 100%;
+      text-align: center;
+      color: #000000;
+    }
+  }
+  .faqSwiper{
+    .faqCard{
+      margin: 20px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      height: 160px;
+      h2{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 100%;
+        color: #000000;
+      }
+      p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 100%;
+        color: #000000;
+        margin: 0;
+      }
+    }
+  }
+}
 @media screen and (max-width: 992px) {
   .popularName{
     h2{
@@ -336,6 +380,13 @@
       }
       p{
         font-size: 12px;
+      }
+    }
+  }
+  .faq{
+    .faqName{
+      h2{
+        font-size: 25px;
       }
     }
   }
@@ -419,6 +470,13 @@
     }
     .aboutUsInfo{
 
+    }
+  }
+  .faq{
+    .faqName{
+      h2{
+        font-size: 22px;
+      }
     }
   }
 }

@@ -110,6 +110,7 @@ function TrackOrder() {
           border: solid 2px rgb(0 0 0 / 31%);
           box-shadow: 0px 0px 7px 0px rgb(0 0 0 / 38%);
           background-color: transparent;
+          transition: all 0.1s linear;
         }
         `}
       </style>

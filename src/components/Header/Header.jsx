@@ -51,6 +51,11 @@ function Header() {
       window.removeEventListener('scroll', scrollNavPhone);
     };
   }, []);
+
+  const catalogClick = () => {
+    setShowMenu(false);
+    window.scrollTo(0, 0);
+  };
   return (
     <>
       <header>
@@ -148,7 +153,7 @@ function Header() {
               { name: 'Отзывы', href: 'feedback' },
             ].map((el, index) => (
               <Link
-                onClick={() => setShowMenu(false)}
+                onClick={() => catalogClick()}
                 key={`navMenu${index}`}
                 to={`/${el.href}`}
                 style={{ textDecoration: 'none' }}>

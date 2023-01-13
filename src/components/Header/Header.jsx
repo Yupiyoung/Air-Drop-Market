@@ -13,6 +13,8 @@ import Instagram from './Icons/Instagram.svg';
 import headerStyle from './header.module.scss';
 import { Container, Navbar, Offcanvas } from 'react-bootstrap';
 
+import { Link } from 'react-router-dom';
+
 function Header() {
   const [showSearch, setShowSearch] = React.useState(false);
   const [search, setSearch] = React.useState('');
@@ -55,7 +57,7 @@ function Header() {
         {navSize === 'pc' ? (
           <Navbar fixed="top" className={headerStyle.navbar}>
             <Container style={{ justifyContent: 'space-between' }}>
-              <Navbar.Brand href="/">
+              <Navbar.Brand href="/" style={{ border: 0 }}>
                 <img alt="Logo" src={Logo} className={headerStyle.logo} height="40px"></img>
               </Navbar.Brand>
               <div className={headerStyle.panel}>
@@ -73,13 +75,13 @@ function Header() {
                   onMouseOver={() => setShowSearch(true)}
                   onMouseOut={() => setShowSearch(false)}></img>
                 <ul>
-                  <li>
+                  <li onClick={() => setShowCart(true)}>
                     <img alt="Cart" src={Cart}></img>
                   </li>
-                  <li>
+                  <li onClick={() => setShowMenu(true)}>
                     <img alt="User" src={User}></img>
                   </li>
-                  <li onMouseOver={() => setShowMenu(true)}>
+                  <li onClick={() => setShowMenu(true)}>
                     <img alt="Menu" src={Menu}></img>
                   </li>
                 </ul>
@@ -94,7 +96,7 @@ function Header() {
               className={
                 showNavTop ? headerStyle.navbarMobileTopActive : headerStyle.navbarMobileTop
               }>
-              <Navbar.Brand href="/">
+              <Navbar.Brand href="/" style={{ border: 0 }}>
                 <img alt="Logo" src={Logo} className={headerStyle.logo} height="40px"></img>
               </Navbar.Brand>
             </Navbar>
@@ -125,7 +127,6 @@ function Header() {
         show={showMenu}
         placement="end"
         onHide={() => setShowMenu(false)}
-        onMouseLeave={() => setShowMenu(false)}
         style={{
           background: 'rgba(0, 0, 0, 0.74)',
           backdropFilter: 'blur(2px)',
@@ -138,17 +139,31 @@ function Header() {
         </Offcanvas.Header>
         <Offcanvas.Body style={{ display: 'flex', justifyContent: 'center' }}>
           <div className={headerStyle.navMenu}>
-            <h2>Каталог</h2>
-            <h2>Отследить заказ</h2>
-            <h2>О нас</h2>
-            <h2>Доставка и оплата</h2>
-            <h2>Контакты</h2>
-            <h2>Отзывы</h2>
+            {[
+              { name: 'Каталог', href: 'catalog' },
+              { name: 'Отследить заказ', href: 'track' },
+              { name: 'О нас', href: 'about-us' },
+              { name: 'Доставка и оплата', href: 'delivery-and-pay' },
+              { name: 'Контакты', href: 'contacts' },
+              { name: 'Отзывы', href: 'feedback' },
+            ].map((el, index) => (
+              <Link
+                onClick={() => setShowMenu(false)}
+                key={`navMenu${index}`}
+                to={`/${el.href}`}
+                style={{ textDecoration: 'none' }}>
+                <h2>{el.name}</h2>
+              </Link>
+            ))}
             <div className={headerStyle.socialNetworks}>
-              {[VK, Telegram, Instagram].map((el, index) => (
-                <a key={`socialNetworks${index}`}>
-                  <img alt="el" height="25px" src={el}></img>
-                </a>
+              {[
+                { img: VK, href: '' },
+                { img: Telegram, href: '' },
+                { img: Instagram, href: '' },
+              ].map((el, index) => (
+                <Link to={`/${el.href}`} key={`socialNetworks${index}`}>
+                  <img alt="el" height="25px" src={el.img}></img>
+                </Link>
               ))}
             </div>
           </div>

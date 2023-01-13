@@ -15,7 +15,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-function Home() {
+export const Home = () => {
   const [brandsScroll, setBrandsScroll] = React.useState(0);
 
   const activeSlideRef = React.useRef(null);
@@ -39,12 +39,15 @@ function Home() {
     return activeSlideRef.current.scrollLeft;
   };
   React.useEffect(() => {
-    activeSlideRef.current.addEventListener('scroll', changeBrandScroll);
-    return () => activeSlideRef.current.removeEventListener('scroll', changeBrandScroll);
+    const instance = activeSlideRef.current;
+    instance.addEventListener('scroll', changeBrandScroll);
+    return () => {
+      instance.removeEventListener('scroll', changeBrandScroll);
+    };
   }, []);
 
   return (
-    <>
+    <div style={{ minHeight: 'calc(100vh - 70px)' }}>
       <style>
         {`.swiper-slide-active{
           filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.1));
@@ -82,7 +85,9 @@ function Home() {
         <div className={homeStyle.popular}>
           <div className={homeStyle.popularName}>
             <h2>Популярные товары</h2>
-            <p>Показать все</p>
+            <a>
+              <p>Показать все</p>
+            </a>
           </div>
           <div className={homeStyle.popularProductBlock}>
             <Swiper slidesPerView={1} modules={[Scrollbar]} scrollbar={{ draggable: true }}>
@@ -133,7 +138,9 @@ function Home() {
         <div className={homeStyle.brand}>
           <div className={homeStyle.brandName}>
             <h2>Nike</h2>
-            <p>Показать все</p>
+            <a>
+              <p>Показать все</p>
+            </a>
           </div>
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <img
@@ -162,7 +169,9 @@ function Home() {
         <div className={homeStyle.brand}>
           <div className={homeStyle.brandName}>
             <h2>Yeezy</h2>
-            <p>Показать все</p>
+            <a>
+              <p>Показать все</p>
+            </a>
           </div>
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <img
@@ -235,8 +244,8 @@ function Home() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
-}
+};
 
 export default Home;

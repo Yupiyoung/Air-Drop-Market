@@ -1,9 +1,17 @@
 *{
   box-sizing: border-box;
-  font-family: 'Poppins';
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 100%;
   color: #000000;
+}
+
+a{
+  transition: border 10s ease-in;
+  cursor: pointer;
+}
+a:hover{
+  border-bottom:solid 0.5px #000000;
 }

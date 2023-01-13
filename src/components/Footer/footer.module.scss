@@ -10,12 +10,13 @@ footer{
       list-style: none;
       ul{
         padding: 0;
-        margin: 0;
+        margin-bottom: 0;
+        margin-top: 10px;
         a{
           font-family: 'Montserrat';
           font-style: normal;
           font-weight: 500;
-          font-size: 13px;
+          font-size: 20px;
           color: #000000;
           margin: 0;
         }
@@ -27,7 +28,7 @@ footer{
       font-family: 'Montserrat';
       font-style: normal;
       font-weight: 600;
-      font-size: 13px;
+      font-size: 20px;
       line-height: 100%;
       color: #000000;
       margin: 0;
@@ -36,13 +37,13 @@ footer{
       list-style: none;
       ul{
         padding: 0;
-        margin: 0;
-        margin-top: 5px;
+        margin-bottom: 0;
+        margin-top: 10px;
         p{
           font-family: 'Montserrat';
           font-style: normal;
           font-weight: 500;
-          font-size: 13px;
+          font-size: 20px;
           color: #000000;
           margin: 0;
         }
@@ -50,7 +51,7 @@ footer{
           font-family: 'Montserrat';
           font-style: normal;
           font-weight: 500;
-          font-size: 13px;
+          font-size: 20px;
           color: #000000;
           margin: 0;
         }
@@ -72,7 +73,7 @@ footer{
       font-family: 'Montserrat';
       font-style: normal;
       font-weight: 500;
-      font-size: 10px;
+      font-size: 15px;
       color: #000000;
       text-align: center;
     }
@@ -81,9 +82,88 @@ footer{
       font-family: 'Montserrat';
       font-style: normal;
       font-weight: 500;
-      font-size: 10px;
+      font-size: 15px;
       color: #000000;
-      text-align: center;
     }
   }
+}
+
+
+@media screen and (max-width: 992px) {
+  footer{
+    .menu{
+      li{
+        ul{
+          a{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13px;
+            color: #000000;
+            margin: 0;
+          }
+        }
+      }
+    }
+    .contacts{
+      h2{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 100%;
+        color: #000000;
+        margin: 0;
+      }
+      li{
+        ul{
+
+          p{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13px;
+            color: #000000;
+            margin: 0;
+          }
+          a{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13px;
+            color: #000000;
+            margin: 0;
+          }
+        }
+      }
+    }
+    .mainFooter{
+
+      .payMethods{
+
+      }
+      p{
+        margin-top: 10px;
+        margin-bottom: 0;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        color: #000000;
+        text-align: center;
+      }
+      a{
+        margin-top: 10px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        color: #000000;
+        text-align: center;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  
 }

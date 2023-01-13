@@ -79,7 +79,7 @@ function TrackOrder() {
   // };
 
   return (
-    <div style={{ minHeight: 'calc(100vh - 70px)' }}>
+    <>
       <style type="text/css">
         {`
         .search-btn{
@@ -97,7 +97,7 @@ function TrackOrder() {
           --bs-btn-active-border-color: #000000;
           --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
           --bs-btn-disabled-color: #000000;
-          --bs-btn-disabled-bg: #353535;
+          --bs-btn-disabled-bg: #ffffff;
           --bs-btn-disabled-border-color: #000000;
           font-style: normal;
           font-weight: 400;
@@ -114,7 +114,7 @@ function TrackOrder() {
         }
         `}
       </style>
-      <div className="container">
+      <div className="container" style={{ minHeight: 'calc(100vh - 70px)' }}>
         <div className={trackOrderStyle.search}>
           <h2>Отследить заказ</h2>
           <Form>
@@ -272,7 +272,7 @@ function TrackOrder() {
           </div>
         ) : null}
       </div>
-    </div>
+    </>
   );
 }
 

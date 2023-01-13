@@ -1,0 +1,19 @@
+
+
+.aboutUs{
+  margin-top: 100px;
+  .aboutUsWall{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img{
+      animation-name: sneakersAnimation;
+      animation-duration: 5s;
+      animation-timing-function: ease-in-out;
+      animation-delay: 0ms;
+      animation-iteration-count: infinite;
+      animation-direction: normal;
+      animation-fill-mode: none;
+    }
+  }
+}

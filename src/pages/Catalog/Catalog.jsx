@@ -1,8 +1,9 @@
 import React from 'react';
-import { Button, Dropdown, DropdownButton, Form } from 'react-bootstrap';
+import { Button, Col, Dropdown, DropdownButton, Form, Offcanvas, Row } from 'react-bootstrap';
 
 import catalogStyle from './catalog.module.scss';
 function Catalog() {
+  const [showFilter, setShowFilter] = React.useState(false);
   return (
     <>
       <style>{`
@@ -27,7 +28,66 @@ function Catalog() {
               </Form.Select>
             </div>
             <div className={catalogStyle.filter}>
-              <Button variant="dark">Фильтры</Button>
+              <Button variant="dark" onClick={() => setShowFilter(true)}>
+                Фильтры
+              </Button>
+              <Offcanvas
+                show={showFilter}
+                placement="end"
+                onHide={() => setShowFilter(false)}
+                style={{
+                  background: 'rgba(0, 0, 0, 0.74)',
+                  backdropFilter: 'blur(2px)',
+                  width: '100%',
+                }}>
+                <Offcanvas.Header closeButton closeVariant="white">
+                  <Offcanvas.Title style={{ color: '#ffffff', fontStyle: 'Montserrat' }}>
+                    Фильтры
+                  </Offcanvas.Title>
+                </Offcanvas.Header>
+                <Offcanvas.Body style={{ display: 'flex', justifyContent: 'space-between' }}>
+                  <div className={catalogStyle.filterWindow}>
+                    <div className={catalogStyle.filterPrice}>
+                      <h2>Цена</h2>
+                      <Row>
+                        <Col>
+                          <Form.Control type="number" min="1900" step="1" placeholder="1900" />
+                        </Col>
+                        <Col>
+                          <Form.Control
+                            type="number"
+                            max="2000000"
+                            step="1"
+                            placeholder="2000000"
+                          />
+                        </Col>
+                      </Row>
+                    </div>
+                    <div className={catalogStyle.filterLists}>
+                      <li>
+                        <h2>Категории</h2>
+                        <ul>
+                          <a>Обувь</a>
+                          <a>Аксессуары</a>
+                          <a>Одежда</a>
+                          <a>Электроника</a>
+                          <a>Детское</a>
+                        </ul>
+                      </li>
+                      <li>
+                        <h2>Бренды</h2>
+                        <ul>
+                          <a>A</a>
+                          <a>B</a>
+                          <a>C</a>
+                          <a>D</a>
+                          <a>E</a>
+                        </ul>
+                      </li>
+                    </div>
+                  </div>
+                </Offcanvas.Body>
+              </Offcanvas>
             </div>
           </div>
           <div className={catalogStyle.products}></div>

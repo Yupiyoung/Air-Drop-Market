@@ -4,6 +4,7 @@ import './App.css';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import AboutUs from './pages/AboutUs/AboutUs';
+import Catalog from './pages/Catalog/Catalog';
 import Contacts from './pages/Contacts/Contacts';
 import DeliveryAndPay from './pages/DeliveryAndPay/DeliveryAndPay';
 import { Home } from './pages/Home/Home';
@@ -32,7 +33,7 @@ function App() {
       <Routes>
         <Route path="/"  exact element={<Home/>}/>
         <Route path="/track" exact element={<TrackOrder></TrackOrder>}/>
-        <Route path="/catalog" exact element={<TrackOrder></TrackOrder>}/>
+        <Route path="/catalog" exact element={<Catalog></Catalog>}/>
         <Route path="/about-us" exact element={<AboutUs></AboutUs>}/>
         <Route path="/delivery-and-pay" exact element={<DeliveryAndPay></DeliveryAndPay>}/>
         <Route path="/contacts" exact element={<Contacts></Contacts>}/>

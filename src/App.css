@@ -15,3 +15,8 @@ a{
 a:hover{
   border-bottom:solid 0.5px #000000;
 }
+
+
+select:focus > option:hover { 
+  background: rgb(255, 26, 26) !important;
+}

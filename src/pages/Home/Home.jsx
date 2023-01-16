@@ -73,7 +73,11 @@ export const Home = () => {
             <Carousel.Item key={`slide${index}`}>
               <img
                 className="w-100"
-                style={{ height: '400px', objectFit: 'cover', objectPosition: '50% 0' }}
+                style={{
+                  minHeight: '300px',
+                  objectFit: 'cover',
+                  objectPosition: '50% 0',
+                }}
                 src={el}
                 alt="First slide"
               />

@@ -12,6 +12,38 @@ function Catalog() {
           box-shadow: none;
           background-color: transparent;
         }
+      .form-control:focus{
+          border: solid 1px rgb(255 255 255 / 78%);
+          box-shadow: 0px 0px 7px 0px rgb(0 0 0 / 38%);
+          background-color: transparent;
+          transition: all 0.1s linear;
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 100%;
+          color: #ffffff;
+      }
+      .form-control{
+        border: solid 1px rgb(255 255 255 / 78%);
+        box-shadow: 0px 0px 7px 0px rgb(0 0 0 / 38%);
+        background-color: transparent;
+        transition: all 0.1s linear;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 100%;
+        color: #ffffff;
+      }
+      .form-control::placeholder {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 100%;
+        color: #ffffff;
+      }
         `}</style>
       <div className="container" style={{ minHeight: 'calc(100vh - 70px)' }}>
         <div className={catalogStyle.catalog}>
